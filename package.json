@@ -1,0 +1,26 @@
+{
+  "name": "spaceship-fighters",
+  "version": "1.0.0",
+  "description": "fight spaceships",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/appianchan/Spaceship-Fighters.git"
+  },
+  "author": "Anthony Chan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/appianchan/Spaceship-Fighters/issues"
+  },
+  "homepage": "https://github.com/appianchan/Spaceship-Fighters#readme",
+  "engines":{
+      "node": "12.6.0"
+    }
+  
+}
