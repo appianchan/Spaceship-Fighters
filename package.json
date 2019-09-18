@@ -4,7 +4,10 @@
   "description": "Shoot down ships and win",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "share": "browser-sync start --proxy 'myproject.dev' --files 'css/*.css'",
+    "postinstall": "npm run share"
+
   },
   "repository": {
     "type": "git",
