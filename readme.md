@@ -1,18 +1,21 @@
-##Spaceship-Fighters
+## Spaceship-Fighters
 
 Spaceship-Fighters is my interpretation of space invaders.
 
-#How to play
+# How to play
 You will command a space ship to shoot down other enemies! Win each stage by shooting down all enemies in that stage. 
 Everytime you get hit by an enemy or by an enemy bullet, your health will go down. Once your health reaches 0, you will lose. 
 You gain points by shooting down enemies, and your score will be recorded at the end. The top 10 players with the most points
 will be able to put his or her name on the high score screen. 
 
-#Technologies and API used
+# Controls
+Press A to move left, D to move right, and press space to fire!
+
+# Technologies and API used
 -Javascript
 -Canvas API will help me render graphics better than using just javascript. 
 
-#MVP's
+# MVP's
 1. Be able to shoot down enemies and gain points
 2. Once player loses, will be led to a high score board. 
 3. Be able to start or quit the game at will when appropriate
@@ -24,7 +27,7 @@ will be able to put his or her name on the high score screen.
 2. Implement powerups
 3. Adjust Difficulty
 
-#Day-by-Day
+# Day-by-Day
 1. Goals:
 -understand how the canvas api works
 -create the bare bones of the project(all files necessary for the project)
