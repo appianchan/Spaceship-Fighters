@@ -21,8 +21,11 @@
     "url": "https://github.com/appianchan/Spaceship-Fighters/issues"
   },
   "homepage": "https://github.com/appianchan/Spaceship-Fighters#readme",
-  "engines":{
-      "node": "12.6.0"
-    }
-  
+  "engines": {
+    "node": "12.6.0"
+  },
+  "dependencies": {
+    "webpack": "^4.40.2",
+    "webpack-cli": "^3.3.9"
+  }
 }
