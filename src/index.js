@@ -25,7 +25,7 @@ import GameView from "./gameview"
 //     radius: 5,
 //     color: "#00FF00"
 // });
-
+console.log("Webpack is working!");
 document.addEventListener("DOMContentLoaded", function () {
     const canvasEl = document.getElementById("game-canvas");
     // canvasEl.width = Game.DIM_X;
