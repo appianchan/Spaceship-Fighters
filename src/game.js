@@ -20,7 +20,7 @@ class Game{
         let i = 0;
         while(this.enemyships.length !== 6){
             this.enemyships.push(new MainEnemy({
-                pos: [i * 100, 100],
+                pos: [i * 200, 100],
                 game: this
             }));
             i++;
@@ -35,7 +35,8 @@ class Game{
     };
 
     allObjects(){
-        return [].concat(this.ships, this.enemyships, this.bullets);
+        // debugger;
+        return [].concat(this.enemyships, this.ships, this.bullets);
     }
     addShip() {
         const ship = new Ship({
@@ -69,10 +70,9 @@ class Game{
                 if (obj1 instanceof Ship){
                     continue;
                 };
-                if (obj1 instanceof Ship) {
+                if (obj1 instanceof MainEnemy && obj2 instanceof MainEnemy) {
                     continue;
                 };
-
                 if (obj1.isCollidedWith(obj2)) {
                     //  && (!obj1 instanceof Ship || !obj2 instanceof Ship)
                     // debugger;
@@ -94,16 +94,38 @@ class Game{
         });
     }
 
-    step(delta) {
-        this.moveObjects(delta);
+    step(delta, time) {
+        this.moveObjects(delta, time);
         this.checkCollisions();
     };
 
-    moveObjects(delta) {
+    moveObjects(delta, time) {
+    this.enemyfirebullet(time);
+    
     this.allObjects().forEach(function (object) {
         object.move(delta);
     });
-}
+    }
+
+    enemyfirebullet(time) {
+        if(time % 1000 >= 980){
+        for(let i = 0; i < this.enemyships.length; i++){
+          
+            
+                
+            let enemy = this.enemyships[i];
+            const bullet = new Bullet({
+                pos: [enemy.pos[0],enemy.pos[1]+26],
+                vel: [0, 4],
+
+            });
+            this.add(bullet);
+                
+           
+            
+        }
+        }
+    }
     
     add(object) {
         if (object instanceof MainEnemy) {

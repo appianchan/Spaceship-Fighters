@@ -7,7 +7,8 @@ class GameView{
     this.enemyships = this.game.createenemyships();
     this.MOVES = {
         a: [-10, 0],
-        d: [10, 0]
+        d: [10, 0],
+        s: [20,0]
     };
 }
 
@@ -25,6 +26,8 @@ bindKeyHandlers() {
         const control = moves[i];
         const move = this.MOVES[control];
         key(control, function () { ship.power(move); });
+        key(control, function () { ship.power(move); });
+        
         
     }
 
@@ -41,9 +44,11 @@ start() {
 };
 
 animate(time) {
+    const lol = time % 1000;
+
     const timeDelta = time - this.lastTime;
 
-    this.game.step(timeDelta);
+    this.game.step(timeDelta, time);
     this.game.draw(this.ctx);
     this.lastTime = time;
     

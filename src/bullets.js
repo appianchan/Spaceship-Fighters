@@ -11,7 +11,6 @@ class Bullet extends moving_obj {
     constructor(props) {
         super(props);
         this.radius = DEFAULTS.RADIUS;
-        this.speed = DEFAULTS.SPEED;
         this.color = DEFAULTS.COLOR;
     }
 
