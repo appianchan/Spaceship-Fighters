@@ -1,5 +1,7 @@
 import moving_obj from "./MovingObject";
 import Bullet from "./bullets";
+import Util from "./util";
+
 // import shipimage from "../pictures/spaceship.png"
 
 
@@ -69,7 +71,7 @@ class Ship extends moving_obj {
         
 
         image.src = "https://opengameart.org/sites/default/files/spaceship.pod_.1.png";
-        ctx.drawImage(image, this.pos[0], this.pos[1], 25, 25);
+        ctx.drawImage(image, this.pos[0], this.pos[1], 60, 60);
 
         // var image = new Image(); 
         // image.src = "https://opengameart.org/sites/default/files/spaceship.pod_.1.png";
@@ -77,6 +79,11 @@ class Ship extends moving_obj {
         //     ctx.drawImage(image, this.pos[0], this.pos[1]);
         // }
     }
+
+    isCollidedWith(otherObject) {
+        const objectDist = Util.dist(this.pos, otherObject.pos);
+        return centerDist <= (this.radius + otherObject.radius);
+    };
     move(timeDelta) {
         const NORMAL_FRAME_TIME_DELTA = 1000 / 60;
         // timeDelta is number of milliseconds since last move
