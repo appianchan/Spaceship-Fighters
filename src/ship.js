@@ -46,7 +46,7 @@ class Ship extends moving_obj {
 
 
         const bullet = new Bullet({
-            pos: [x, y - this.radius],
+            pos: [x + 30, y],
             vel: [0,-4]
         });
 
