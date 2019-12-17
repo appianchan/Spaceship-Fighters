@@ -47,13 +47,25 @@ animate(time) {
     const lol = time % 1000;
 
     const timeDelta = time - this.lastTime;
-
-    this.game.step(timeDelta, time);
-    this.game.draw(this.ctx);
-    this.lastTime = time;
+    
+   
+        this.game.step(timeDelta, time);
+        this.game.draw(this.ctx);
+        this.lastTime = time;
+        requestAnimationFrame(this.animate.bind(this));
+    
+    
+    
+    
     
     // every call to animate requests causes another call to animate
-    requestAnimationFrame(this.animate.bind(this));
+    
 };
+
+gameover(){
+    var image = new Image();
+    image.src = "https://opengameart.org/sites/default/files/spaceship.pod_.1.png";
+    ctx.drawImage(image, this.pos[0], this.pos[1], 60, 60);
+}
 }
 export default GameView;

@@ -10,6 +10,8 @@ class Game{
         this.enemyships = [];
         this.bullets = [];
         this.ships = [];
+        this.gamewon = false;
+        this.gameloss = false;
         this.BG_COLOR = "#000000";
         this.DIM_X = 1000;
         this.DIM_Y = 800;
@@ -78,23 +80,31 @@ class Game{
                     // debugger;
                     // const collision = obj1.collideWith(obj2);
                     // if (collision) return;
+                    if (obj1 instanceof Ship || obj2 instanceof Ship){
+                        this.gameloss = true;
+                    }
                     this.remove(obj1);
                     this.remove(obj2);
-                    // if (obj1 instanceof Ship || obj2 instanceof Ship){
-                    //     return false;
-                    // }
                     return;
                 }
             }
         }
+        return true;
     };
     draw(ctx){
         ctx.clearRect(0, 0, this.DIM_X, this.DIM_Y);
         ctx.fillStyle = this.BG_COLOR;
         ctx.fillRect(0, 0, this.DIM_X, this.DIM_Y);
+        if (this.gameloss === true){
+            var image = new Image();
+            image.src = "http://vignette4.wikia.nocookie.net/adventuretimewithfinnandjake/images/7/77/S2e16_You_lose.png/revision/latest?cb=20141109223427";
+            ctx.drawImage(image, 60, 100, 900, 400);
+        }else{
+        
         this.allObjects().forEach(function (object) {
             object.draw(ctx);
         });
+        }
     }
 
     step(delta, time) {
