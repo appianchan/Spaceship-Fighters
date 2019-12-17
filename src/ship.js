@@ -35,7 +35,7 @@ class Ship extends moving_obj {
     };
 
     fireBullet() {
-        const x, y = this.pos;
+        // const x, y = this.pos;
         // debugger;
         
 
