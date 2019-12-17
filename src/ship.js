@@ -35,11 +35,13 @@ class Ship extends moving_obj {
     };
 
     fireBullet() {
-
+        const x, y = this.pos;
+        // debugger;
+        
 
 
         const bullet = new Bullet({
-            pos: this.pos,
+            pos: [x,this.radius + 1],
             vel: [0,-4]
         });
 

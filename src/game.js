@@ -67,9 +67,9 @@ class Game{
                 const obj1 = allObjects[i];
                 const obj2 = allObjects[j];
                 // debugger;
-                if (obj1 instanceof Ship){
-                    continue;
-                };
+                // if (obj1 instanceof Ship){
+                //     continue;
+                // };
                 if (obj1 instanceof MainEnemy && obj2 instanceof MainEnemy) {
                     continue;
                 };
@@ -100,11 +100,11 @@ class Game{
     };
 
     moveObjects(delta, time) {
-    this.enemyfirebullet(time);
+        this.enemyfirebullet(time);
     
-    this.allObjects().forEach(function (object) {
-        object.move(delta);
-    });
+        this.allObjects().forEach(function (object) {
+            object.move(delta);
+        });
     }
 
     enemyfirebullet(time) {
