@@ -61,6 +61,9 @@ class Game{
         } else {
             throw new Error("unknown type of object");
         }
+        if(this.enemyships.length === 0){
+            this.gamewon = true;
+        }
     };
     checkCollisions() {
         const allObjects = this.allObjects();
@@ -98,6 +101,10 @@ class Game{
         if (this.gameloss === true){
             var image = new Image();
             image.src = "http://vignette4.wikia.nocookie.net/adventuretimewithfinnandjake/images/7/77/S2e16_You_lose.png/revision/latest?cb=20141109223427";
+            ctx.drawImage(image, 60, 100, 900, 400);
+        }else if(this.gamewon === true){
+            var image = new Image();
+            image.src = "https://ak7.picdn.net/shutterstock/videos/34233727/thumb/1.jpg";
             ctx.drawImage(image, 60, 100, 900, 400);
         }else{
         
