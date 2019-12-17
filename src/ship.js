@@ -51,19 +51,31 @@ class Ship extends moving_obj {
         this.game.add(bullet);
     };
     draw(ctx) {
+        // const image = document.getElementById('ship');
+        var image = new Image();
         if (this.pos[0] <= 0){
             this.pos[0] = 0;
         } 
         if (this.pos[0] >= 1000) {
             this.pos[0] = 1000;
         } 
-        ctx.fillStyle = this.color;
-        ctx.beginPath();
-        ctx.arc(
-            this.pos[0], this.pos[1], this.radius, 0, 2 * Math.PI
-        );
-        ctx.fill();
-        // ctx.drawImage(this.image, this.pos[0], this.pos[1], 25, 25)
+        // ctx.fillStyle = this.color;
+        // ctx.beginPath();
+        // ctx.arc(
+        //     this.pos[0], this.pos[1], this.radius, 0, 2 * Math.PI
+        // );
+        // ctx.fill();
+
+        
+
+        image.src = "https://opengameart.org/sites/default/files/spaceship.pod_.1.png";
+        ctx.drawImage(image, this.pos[0], this.pos[1], 25, 25);
+
+        // var image = new Image(); 
+        // image.src = "https://opengameart.org/sites/default/files/spaceship.pod_.1.png";
+        // image.onload = function () {
+        //     ctx.drawImage(image, this.pos[0], this.pos[1]);
+        // }
     }
     move(timeDelta) {
         const NORMAL_FRAME_TIME_DELTA = 1000 / 60;
