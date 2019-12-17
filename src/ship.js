@@ -1,5 +1,6 @@
 import moving_obj from "./MovingObject";
-import Bullet from "./bullets"
+import Bullet from "./bullets";
+// import shipimage from "../pictures/spaceship.png"
 
 
 const DEFAULTS = {
@@ -11,7 +12,8 @@ const DEFAULTS = {
 class Ship extends moving_obj {
     constructor(props) {
         super(props);
-        this.vel = props.vel || [0,0]
+        // this.image = url(shipimage);
+        this.vel = props.vel || [0,0];
         this.radius = DEFAULTS.RADIUS;
         this.color = DEFAULTS.COLOR;
     }
@@ -61,6 +63,7 @@ class Ship extends moving_obj {
             this.pos[0], this.pos[1], this.radius, 0, 2 * Math.PI
         );
         ctx.fill();
+        // ctx.drawImage(this.image, this.pos[0], this.pos[1], 25, 25)
     }
     move(timeDelta) {
         const NORMAL_FRAME_TIME_DELTA = 1000 / 60;
