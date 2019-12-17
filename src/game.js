@@ -80,6 +80,9 @@ class Game{
                     // if (collision) return;
                     this.remove(obj1);
                     this.remove(obj2);
+                    // if (obj1 instanceof Ship || obj2 instanceof Ship){
+                    //     return false;
+                    // }
                     return;
                 }
             }
@@ -97,6 +100,7 @@ class Game{
     step(delta, time) {
         this.moveObjects(delta, time);
         this.checkCollisions();
+        
     };
 
     moveObjects(delta, time) {
