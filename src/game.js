@@ -22,7 +22,7 @@ class Game{
         let i = 0;
         while(this.enemyships.length !== 6){
             this.enemyships.push(new MainEnemy({
-                pos: [i * 200, 100],
+                pos: [i * 150, 100],
                 game: this
             }));
             i++;
