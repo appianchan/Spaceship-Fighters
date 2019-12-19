@@ -26,7 +26,7 @@ class MainEnemy extends moving_obj{
             // ctx.fill();
         var image = new Image();
         image.src = "https://www.pngkey.com/png/full/217-2170276_invader-space-invaders-enemy-png.png";
-        ctx.drawImage(image, this.pos[0], this.pos[1], 60, 60);
+        ctx.drawImage(image, this.pos[0], this.pos[1], 50, 40);
     }
     fireBullet() {
 

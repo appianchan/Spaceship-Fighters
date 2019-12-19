@@ -58,8 +58,8 @@ class Ship extends moving_obj {
         if (this.pos[0] <= 0){
             this.pos[0] = 0;
         } 
-        if (this.pos[0] >= 1000) {
-            this.pos[0] = 1000;
+        if (this.pos[0] >= 940) {
+            this.pos[0] = 940;
         } 
         // ctx.fillStyle = this.color;
         // ctx.beginPath();
