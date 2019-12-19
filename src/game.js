@@ -110,7 +110,11 @@ class Game{
             image.src = "https://ak7.picdn.net/shutterstock/videos/34233727/thumb/1.jpg";
             ctx.drawImage(image, 60, 100, 900, 400);
 
-        
+        } else if (this.startscreen === true) {
+            ctx.fillStyle = "blue";
+            ctx.font = "30px Arial";
+
+            ctx.fillText("Hello World", 100, 500);
         }else{
         
         this.allObjects().forEach(function (object) {
@@ -118,6 +122,7 @@ class Game{
         });
         }
     }
+    
 
     step(delta, time) {
         this.moveObjects(delta, time);

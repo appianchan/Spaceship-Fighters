@@ -17,6 +17,7 @@ class GameView{
 
 bindKeyHandlers() {
     const ship = this.ship;
+    const game = this.game;
     const moves = ['w', 's', 'a', 'd'];
 
     // Object.keys(MOVES).forEach(function (k) {
@@ -34,12 +35,8 @@ bindKeyHandlers() {
     }
 
     key("space", function () { ship.fireBullet(); });
-    key("return", function () { this.startscreen = false; });
+    key("return", function () { game.startscreen = false; });
 };
-
-changetogame(){
-    this.startscreen = false;
-}
 
 
 
@@ -58,9 +55,11 @@ animate(time) {
     
     
     
+    this.game.draw(this.ctx);
+    if(this.game.startscreen === false){
         this.game.step(timeDelta, time);
-        this.game.draw(this.ctx);
-        this.lastTime = time;
+    }
+    this.lastTime = time;
     
     
         
