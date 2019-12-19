@@ -13,6 +13,7 @@ class Game{
         this.gamewon = false;
         this.gameloss = false;
         this.startscreen = true;
+        this.restart = false;
         this.BG_COLOR = "#000000";
         this.DIM_X = 1000;
         this.DIM_Y = 800;
@@ -21,6 +22,7 @@ class Game{
     }
     
     createenemyships(){
+        this.enemyships = [];
         let i = 0;
         while(this.enemyships.length !== 6){
             this.enemyships.push(new MainEnemy({
@@ -43,6 +45,7 @@ class Game{
         return [].concat(this.enemyships, this.ships, this.bullets);
     }
     addShip() {
+        this.ships = [];
         const ship = new Ship({
             pos: [800, 700],
             game: this
@@ -134,6 +137,19 @@ class Game{
         this.allObjects().forEach(function (object) {
             object.draw(ctx);
         });
+        }
+
+        if (this.restart === true){
+            this.gamewon = false;
+            this.gameloss = false;
+            this.addShip();
+            this.createenemyships();
+            this.bullets = [];
+            this.restart = false;
+            // this.allObjects().forEach(function (object) {
+            //     object.draw(ctx);
+            // });
+
         }
     }
     

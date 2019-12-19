@@ -33,7 +33,8 @@ bindKeyHandlers() {
         
         
     }
-
+    
+    key("r", function () { game.restart = true; });
     key("space", function () { ship.fireBullet(); });
     key("return", function () { game.startscreen = false; });
 };
@@ -44,7 +45,6 @@ start() {
     this.bindKeyHandlers();
     this.lastTime = 0;
     // start the animation
-    this.openingscreen();
     requestAnimationFrame(this.animate.bind(this));
 };
 
@@ -57,6 +57,14 @@ animate(time) {
     
     this.game.draw(this.ctx);
     if(this.game.startscreen === false){
+        if (this.game.restart === true){
+            this.bindKeyHandlers();
+            this.game.restart = false;
+            this.game.gamewon = false;
+            this.game.gameloss = false;
+            this.game.addShip();
+            this.game.createenemyships();
+        }
         this.game.step(timeDelta, time);
     }
     this.lastTime = time;
@@ -75,13 +83,6 @@ animate(time) {
     // every call to animate requests causes another call to animate
     
 };
-
-openingscreen(){
-    this.ctx.fillStyle = "blue";
-    this.ctx.font = "30px Arial";
-
-    this.ctx.fillText("Hello World", 100, 500);
-}
 
 // gameover(){
 //     var image = new Image();

@@ -5,27 +5,9 @@ import Game from "./game";
 import GameView from "./gameview"
 
 
-// const mo = new moving_obj({
-//     pos: [220, 30],
-//     vel: [10, 10],
-//     radius: 5,
-//     color: "#00FF00"
-// });
+// console.log("Webpack is working!");
 
-// const enemy = new MainEnemy({
-//     pos: [800, 0],
-//     vel: [10, 10],
-//     radius: 5,
-//     color: "#00FF00"
-// });
 
-// const player = new Ship({
-//     pos: [800, 700],
-//     vel: [10, 10],
-//     radius: 5,
-//     color: "#00FF00"
-// });
-console.log("Webpack is working!");
 document.addEventListener("DOMContentLoaded", function () {
     const canvasEl = document.getElementById("game-canvas");
     // canvasEl.width = Game.DIM_X;
