@@ -16,6 +16,18 @@ class MainEnemy extends moving_obj{
         this.health = 1;
         this.vel = props.vel || [2, 0]
     }
+    draw(ctx) {
+        // ctx.fillStyle = this.color;
+        
+        // ctx.beginPath();
+        // ctx.arc(
+            //     this.pos[0], this.pos[1], this.radius, 0, 2 * Math.PI
+            // );
+            // ctx.fill();
+        var image = new Image();
+        image.src = "https://www.pngkey.com/png/full/217-2170276_invader-space-invaders-enemy-png.png";
+        ctx.drawImage(image, this.pos[0], this.pos[1], 60, 60);
+    }
     fireBullet() {
 
         const bullet = new Bullet({
