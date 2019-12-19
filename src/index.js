@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // canvasEl.width = Game.DIM_X;
     // canvasEl.height = Game.DIM_Y;
     const ctx = canvasEl.getContext("2d");
-    ctx.fillStyle = "#FF0000";
+    ctx.fillStyle = "#000000";
     ctx.fillRect(0, 0, 1000, 800);
     
     // mo.draw(ctx);

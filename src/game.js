@@ -12,10 +12,12 @@ class Game{
         this.ships = [];
         this.gamewon = false;
         this.gameloss = false;
+        this.startscreen = true;
         this.BG_COLOR = "#000000";
         this.DIM_X = 1000;
         this.DIM_Y = 800;
         this.FPS = 32;
+
     }
     
     createenemyships(){
@@ -102,10 +104,13 @@ class Game{
             var image = new Image();
             image.src = "http://vignette4.wikia.nocookie.net/adventuretimewithfinnandjake/images/7/77/S2e16_You_lose.png/revision/latest?cb=20141109223427";
             ctx.drawImage(image, 60, 100, 900, 400);
+            
         }else if(this.gamewon === true){
             var image = new Image();
             image.src = "https://ak7.picdn.net/shutterstock/videos/34233727/thumb/1.jpg";
             ctx.drawImage(image, 60, 100, 900, 400);
+
+        
         }else{
         
         this.allObjects().forEach(function (object) {
