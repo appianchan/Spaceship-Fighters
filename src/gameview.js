@@ -34,7 +34,7 @@ bindKeyHandlers() {
         
     }
     
-    key("r", function () { game.restart = true; });
+    // key("r", function () { game.restart = true; });
     key("space", function () { ship.fireBullet(); });
     key("return", function () { game.startscreen = false; });
 };
