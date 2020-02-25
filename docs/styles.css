@@ -1,0 +1,31 @@
+canvas{
+
+    width: 1000px;
+    height: 800px;
+
+
+}
+html{
+    background-color: lightcoral;
+}
+footer{
+    width: 1100px;
+    display: flex;
+    flex-direction: row;
+    font-size: 25px;
+    justify-content: space-between;
+}
+
+p.title{
+    font-size: 70px;
+    font-family: fantasy;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+div.page-container{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
