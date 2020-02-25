@@ -8,6 +8,13 @@ canvas{
 html{
     background-color: lightcoral;
 }
+footer{
+    width: 1100px;
+    display: flex;
+    flex-direction: row;
+    font-size: 25px;
+    justify-content: space-between;
+}
 
 p.title{
     font-size: 70px;
