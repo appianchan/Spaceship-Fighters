@@ -22,6 +22,9 @@ p.title{
     margin-bottom: 20px;
     margin-top: 20px;
 }
+p.instructions{
+    font-size: 50px;
+}
 
 div.page-container{
     display: flex;
@@ -29,3 +32,9 @@ div.page-container{
     /* justify-content: center; */
     align-items: center;
 }
+
+
+/* div.main-body{
+    display: flex;
+    flex-direction: row;
+} */
