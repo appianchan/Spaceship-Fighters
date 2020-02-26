@@ -114,22 +114,22 @@ class Game{
             ctx.drawImage(image, 60, 100, 900, 400);
 
         } else if (this.startscreen === true) {
-            ctx.fillStyle = "lawngreen";
-            ctx.font = "50px bold Verdana";
-            ctx.textBaseline = 'middle';
-            ctx.textAlign = "center";
-            ctx.fillText("Spaceship Fighter", 500, 200);
+            // ctx.fillStyle = "lawngreen";
+            // ctx.font = "50px bold Verdana";
+            // ctx.textBaseline = 'middle';
+            // ctx.textAlign = "center";
+            // ctx.fillText("Spaceship Fighter", 500, 200);
 
 
-            ctx.font = "20px Arial";
-            ctx.fillStyle = "DeepPink";
-            ctx.fillText("Use the 'a' and 'd' keys to move and the 's' key to stop moving", 500, 400)
-            ctx.fillText("Press space to shoot to destroy as many ships as you can!", 500, 430)
+            // ctx.font = "20px Arial";
+            // ctx.fillStyle = "DeepPink";
+            // ctx.fillText("Use the 'a' and 'd' keys to move and the 's' key to stop moving", 500, 400)
+            // ctx.fillText("Press space to shoot to destroy as many ships as you can!", 500, 430)
 
 
             ctx.font = "60px bold Gill Sans";
             ctx.fillStyle = "red";
-            ctx.fillText("Press enter to start!", 500, 600)
+            ctx.fillText("Press enter to start!", 270, 400)
             //500 is the width of the canvas / 2
 
         }else{

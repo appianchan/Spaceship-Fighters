@@ -29,3 +29,8 @@ div.page-container{
     /* justify-content: center; */
     align-items: center;
 }
+
+p.instructions{
+    font-size: 20px;
+    margin-top: 0px;
+}
